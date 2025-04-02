@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neero | Free and secure</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+
+        .p_links{
+            font-size: 20px;
+
+        }
+        .p_items:hover{
+        color: white;
+        }
+        .vi_title1{
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(to right, #9BA1C9, #69719E);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .figure{
+            
+            background: linear-gradient(to top, #172156, #515A89,white);
+            color: transparent;
+        }
+        .g_text{
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(to right, #F81380, #B635B3,#8D69CF,#FD966B,#879C6D);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .divider{
+              
+            background: linear-gradient(to right, #D8DEFF, #1E285C);
+            color: transparent;
+        }
+        .plan_link:hover{
+          text-decoration: underline 1px;
+         
+        }
+      
+        
+          /* Basic Styles */
+       
+        /* Button Styling */
+      
+
+        /* Popup Background */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Popup Box */
+        .popup-box {
+            background: white;
+            padding: 20px;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        
+        
+    </style>
+
+    <link rel="stylesheet" href="media_queries.css">
+</head>
+<body>
+    <div class="container">
+        <!--Header-->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav_logo" style="margin-left: 20px;">
+            <a href="#">
+            <img src="images/logo_neero.svg" alt="" class="logo">
+           </a>
+           <div class="menu_icon" onclick="toggleMenu()">☰</div>
+
+            </div>
+            <div class="nav_buttons">
+                    <button class="personal">
+                    Personal
+                </button>
+              
+                <a href="#" class="enterprise"> 
+                Enterprise
+            </a>
+            
+            </div>
+            <div class="nav_menu" id="navLinks">
+               <ul class="nav_list">
+               <li class="nav_items"><a href="#" class="nav_links">Home</a></li>
+               <li class="nav_items"><a href="#" class="nav_links">Yara</a></li>
+               <li class="nav_items"><a href="#" class="nav_links">Pool</a></li> 
+               <li class="nav_items"><a href="#" class="nav_links">Services</a></li>
+               <li class="nav_items"> <a href="#" class="nav_links">Blog</a></li> 
+               <li class="nav_items"> <a href="#" class="nav_links"> <span style="margin-left: 20px;"><img src="images/en_flag.svg" alt="">  EN</span></a></li>
+               </ul>
+               
+            </div>
+            
+            <div class="button_register">
+                <button class="register">
+                   Register
+                </button>
+            </div>
+            
+        </nav>
+    </header>
+    <!-- End of header -->
+
+    <!-- Section hero -->
+    <section class="hero" style="display: inline-flex; background-color: #F2F3FF; width: 100%; ">
+        <div class="hero_text">
+            <h1 class="title">
+                A Free Virtual Visa Card
+              <br>  to Simplify Your Online
+               <br> Shopping
+             </h1>
+             <p class="promo">
+                With our free virtual Visa card,
+                <span class="side"> you can make online payments</span>
+ <br>  smoothly and securely. Ideal for Cameroon, Gabon, and Congo.
+             </p>
+             <button class="card_button popup-button" onclick="openPopup()">
+                Get your card
+             </button>
+             <!--Pop up container-->
+
+             <div class="popup-container" id="popup">
+                <div class="popup-box">
+                    <button class="close-btn" onclick="closePopup()">X</button>
+                    <h2>Get the</h2>
+                    <h2>Neero Application.</h2>
+                    <p>Scan the code to download the Neero Application</p>
+                    <div>
+                    <img src="images/qr-code.png" alt="" width="100%" height="300px">
+                </div>
+                </div>
+            </div>
+
+        <!--End of Pop up container-->
+
+        </div>
+
+        <div class="hero_phone">
+          <img src="images/card_holder.webp" alt="phone" class="card_holder" width="70%">
+        </div>
+        
+
+    </section>
+    <!-- End of section Hero -->
+
+    <!-- Play -->
+     
+    <div class="play_circle" style="display: inline-flex; align-items: center; color: #6B5AED ; ">
+        <img src="images/play_circle.svg" alt="play" >
+        <p>
+            Learn more about how virtual
+          <br>  cards work
+        </p>
+    </div>
+    
+        <!-- End of Play -->
+
+
+    <!--Section one -->
+<section class="section_one">
+
+    <div class="section_card" style="display: flex;">
+        <h1 class="section_title">A Better Alternative to the
+          <br>   Physical Bank Card
+            </h1>
+            <div class="section_logo" >
+                <img src="images/logo.svg" alt="logo">
+            </div>
+
+    </div>
+    <div class="card_row" >
+        <div class="card_one">
+            <h5 class="card_heading card_heading_one" style="text-align: center;">card price: 0 F.CFA </h5>
+            <p class="card_body" style="text-align: center;">
+                Our cards remind you on time for all
+                <br> your subscriptions.
+            </p>
+            <img src="images/card_fees.webp" alt="" width="90%">
+        </div>
+        <div class="card_two">
+            <h5 class="card_heading card_heading_two" style="text-align: center;">Tools to Spend Smarter </h5>
+            <p class="card_body body_text_two" style="text-align: center;">
+                With our subscription manager, you receive alerts for all upcoming payments on your card,
+                 allowing you to better plan your spending.
+            </p>
+            
+            <img src="images/neero_payments.png" alt="" width="90%">
+            
+        </div>
+        <div class="card_three" >
+            <h5 class="card_heading card_heading_three" style="text-align: center;">
+                Pay all your subscriptions with Neero's virtual Visa
+                 </h5>
+            <p class="card_body" style="text-align: center;">
+                Make payments for your subscriptions like Netflix, Spotify, 
+                and also for your purchases from suppliers in China on Alibaba, or at your favorite stores.
+                <br> your subscriptions.
+            </p>
+           
+        </div>
+    </div>
+
+</section>
+    <!--End of Section one -->
+
+    <!--Section visa-->
+
+ <section class="visa" style="margin-top: 50px; background-color: #080D2B; ">
+    <div class="visa_logo" style="text-align: center; ">
+        <img src="images/logo.svg" alt="logo" style="margin-top: 60px;">
+    </div>
+    <div class="visa_title" style="text-align: center;">
+        <h1 class="vi_title" style="color: white; font-size: 50px; ">
+            Why choose
+        </h1>
+        <h1 class="vi_title1" style=" font-size: 50px; ">The Neero virtual card </h1>
+    </div>
+    <div class="first_divider" style="margin-left: 665px; margin-bottom: 30px;">
+        <div class="figure" style="  height: 100px; width: 7px;  border-radius: 25px;">
+
+        </div>
+    </div>
+    <div class="functionalities" style="color: white; font-size: 20px; display: flex;  margin: 20px ; ">
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px; "> <span><img src="images/ai_star.svg" alt=""></span> Recharge your mobile money account</h5>
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px;"> <span><img src="images/ai_star.svg" alt=""></span> Recharge with paypal</h5>
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px;"> <span><img src="images/ai_star.svg" alt=""></span> No maintainance fees </h5>
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px;"> <span><img src="images/ai_star.svg" alt=""></span> Card statements</h5>
+    </div>
+    <div class="functionalities1" style=" color: white; font-size: 20px; display: flex; margin: 10px ;">
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px;"> <span><img src="images/ai_star.svg" alt=""></span> Instant Transaction notification</h5>
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px;"> <span><img src="images/ai_star.svg" alt=""></span> Restrict your card whenever you want</h5>
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px;"> <span><img src="images/ai_star.svg" alt=""></span> The best Rates on the market</h5>
+        <h5 class="mm" style="border: 2px solid white; width: 400px; border-radius: 25px; padding: 5px; margin: 2px;"> <span><img src="images/ai_star.svg" alt=""></span> Anti-fraud protection</h5>
+    </div>
+
+    <div class="card_hand" style="text-align: center; margin: 15px;" >
+        <img src="images/v_card_hand.webp" alt="card_hand" width="50%" class="card_hands">
+    </div>
+
+    <div class="cta_text_body" style="text-align: center;" >
+        <h1 class="cta_text">Order Your Neero Visa <span class="c">Card for</span>  
+          <br>  Free
+        </h1>
+
+<button class="cta_button  popup-button" onclick="openPopup()">
+     Get your card
+</button>    
+    </div>
+   <br>
+   <br>
+   <br>
+   <br>
+ </section>
+    <!--End of Section visa-->
+
+    <!-- Section pay -->
+ <section class="pay" style="background-color: #F5F5F5; ">
+
+    <div class="pay_title_body" style="color: black;  text-align: center; ">
+       <br>
+       <br>
+       <br>
+        <h1 class="pay_title"  style="font-size: 60px;" >
+            Link Your Card to 
+            <br>  PayPal, Google & Apple 
+             <br>  Pay
+        </h1>
+      <div class="pay_img" style="display: flex; justify-content: center;">
+        <img src="images/link_card_phone.webp" alt="link_card_phone" width="30%" height="30%" class="smartphone">
+
+        <div class="text">
+            <h1 class="titl" style="font-size: 50px;">
+              <span class="g_text">Enjoy a Card for </span>  
+               <br><span class="g_text"> Your Online</span> 
+              <br><span class="g_text">Purchases</span> 
+            </h1>
+
+            <p class="v_card" style="font-size: 20px;"> 
+                With our free virtual Visa card, enjoy a fee-free
+                <br> online payment solution,
+             specially designed for <br> residents of Cameroon.
+            </p>
+        </div>
+      </div>
+
+    </div>
+ </section>
+     <!-- End of Section pay -->
+
+     <!-- Section spend -->
+ <section class="spend">
+
+    <div class="cont">
+    <div class="spend_title">
+        <h1 style="font-size: 40px;" class="titre">
+            Spend Online Securely With Our
+     <br> Card Security Measures
+        </h1>
+    </div>
+    <div class="freed">
+       <h1 class="freed_title" style="display: flex; align-items: center; gap: 8px;">
+       <span><img src="images/credit_card_lock.svg" alt="card_lock" style="width: 24px;"></span> 
+         Freeze Card
+     </h1>
+       <h3 class="freed_title freed_title1">
+        Block your card to prevent unauthorized use, then unblock it when it's safe.
+    </h3>
+    </div>
+    <div class="freed_divider">
+        <div class="divider">
+
+        </div>
+    </div>
+
+    <h1 class="freed_title" style="display: flex; align-items: center;  gap: 8px;">
+       <span><img src="images/shield.svg" alt="card_lock" style="width: 24px; height: auto;"></span>
+          Two-Factor Authentication 
+    </h1>
+    <br>
+    <br>
+    <h1 class="freed_title" style="display: flex; align-items: center;  gap: 8px;">
+       <span><img src="images/bell.svg" alt="bell" style="width: 24px; height: auto;"></span>  
+         Instant notification 
+    </h1>
+</div>
+
+<div class="spend_img">
+    <img src="images/neero_security.webp" alt="Security" height="80%" class="security">
+</div>
+ </section>
+   <!-- End of section spend -->
+
+ <!--- Testimonial -->
+   <section class="testimonials" style="display: inline-flex;">
+    <div class="text_icon" style="margin-left: 100px;">
+        <h1 style="font-size: 40px;" class="testi_title">
+            Here's
+ <br>  what
+ <br>   people
+  <br>  are
+ <br>   saying
+  <br> about us
+        </h1>
+       <a href="#"><i class="fa fa-arrow-left" style="font-size: 60px; background-color: #F3F4F6; color: #808486; padding: 10px; border-radius: 50%; margin-right: 5px; "></i></a> 
+       <a href="#">  <i class="fa fa-arrow-right" style="font-size: 60px; background-color: #6B5AED; color: #fff; padding: 10px; border-radius: 50%; margin-left: 5px;"></i>  </a>
+        
+    </div>
+    <div class="arrow_card" style="  background-color:#6A59EC;
+    width: 350px;
+    height: 400px;
+    padding:20px;
+    color: white;
+    border-radius: 25px;
+    margin-left: 60px;">
+        <h3 class="arrow_title">
+            Very good app. I highly
+            <br>
+<br> recommend it to those who
+<br>
+<br> have problems with online
+<br>
+<br> payments, Neero is the
+<br>
+<br> solution. Payments are
+<br>
+<br> smooth and fast.
+        </h3>
+        <br>
+        <div class="arrow_btn_box" style="margin-top: 20px; ">
+            <a href="#" class="arrow_btn" style="margin-left: 50px; width: 450px;
+            height: 100px;">Spivan Fotie on Google Play</a>
+        </div>
+       
+    </div>
+    <div class="arrow_card arrow_card1" style="background-color:#253237;
+    width: 350px;
+    height: 400px;
+    padding:20px;
+    color: white;
+    border-radius: 25px;
+    margin-left: 60px;">
+        <h3 class="arrow_title">
+            <br>
+            <br>
+            <br>
+            
+            After several weeks of use
+            <br>
+<br> now, I can give my 100%
+<br>
+<br> satisfied feedback on their
+<br>
+<br> virtual card online.
+<br>
+        </h3>
+        <br>
+        <div class="arrow_btn_box" style="margin-top: 20px; ">
+            <a href="#" class="arrow_btn" style="margin-left: 50px; "> Mbianda Casimir on Google Play  </a>
+        </div>
+       
+    
+</div>
+   </section>
+
+ <!--- End of Testimonial -->
+
+   <!-- Section plan -->
+<section class="plan" style="background-color: #080D2A; height: 800px;  width: auto;">
+    <h1 class="plan_title">
+        Choose Your Plan
+    </h1>
+    <div class="cards" style="display: inline-flex;">
+    <div class="plan_card_one" >
+        <div class="content">
+        <h2 class="plan_card_title">Standard</h2>
+        <h3 class="plan_card_title">Free</h3>
+        <p class="plan_card_text"> 
+            The no-commitment offer, the
+           <br> best way to stay zen
+        </p>
+        <div class="plan_links">
+        <a href="#" class="plan_link" >Learn more <i class="fa fa-arrow-right" style="margin-left: 25px;"></i></a>
+        </div>
+    </div>
+    </div>
+    <div class="plan_card_one card_two" >
+        <div class="content">
+        <h2 class="plan_card_title">Premium</h2>
+        <h3 class="plan_card_title card_two_title">10,000 F.CFA/month</h3>
+        <p class="plan_card_text"> 
+            2 months free when opting for the
+           <br> annual subscription           
+        </p>
+        <a href="#" class="plan_link">Learn more <i class="fa fa-arrow-right" style="margin-left: 25px;"></i></a>
+    </div>
+    </div>
+    <div class="plan_card_one card_3" >
+        <div class="content">
+        <h2 class="plan_card_title">Ultra</h2>
+        <h3 class="plan_card_title card_3_title"> 50,000 F.CFA/month</h3>
+        <p class="plan_card_text"> 
+            The no-commitment offer, the
+           <br> best way to stay zen
+        </p>
+        <a href="#" class="plan_link">Learn more <i class="fa fa-arrow-right" style="margin-left: 25px;"></i></a>
+    </div>
+    </div>
+
+    
+</div>
+<div class="slogan" style="margin-top: 100px;">
+    <h1 style="font-size: 40px; text-align: center; color: white; ">
+        Neero, Like a bank. Simpler. And free.
+    </h1>
+</div>
+
+<div class="downloadstores">
+ <a href="#" class=" popup-button" onclick="openPopup()"><img src="images/dark_google_play.svg" alt="playstore"></a>
+ <a href="#" class="store_link  popup-button" onclick="openPopup()"><img src="images/dark_appstore.svg" alt="appstore"></a> 
+</div>
+
+</section>
+
+   <!-- End of Section plan -->
+
+
+<!-- Footer -->
+<footer style="background-color: #080D2A; height: 2100px; width: auto;" class="footer">
+
+    <div class="foot_divider" >
+        <div class="f_div" style=" width: 1200px;
+        height: 3px  ;
+        background-color: #64738B; margin: auto;">
+        </div>
+    </div>
+    <div class="foot_menu" style="margin:  auto; display: inline-flex;" >
+    <div class="products" style="margin-left: 60px;">
+        <h3 class="p_title" style="color: white;">PRODUCTS</h3>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Virtual Card</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">Physical Card</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">Send Money</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">Buy Airtime</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">Bank Deposit</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">Bill Payement</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">Money Transfer</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">Create NIU</li></a>
+    </div>
+    <div class="security" style="margin-left: 30px;">
+        <h3 class="p_title" style="color: white;">SECURITY</h3>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Security</li></a>
+        <a href="#" class="p_links" style="text-decoration: none;  margin: 2px;"><li class="p_items">On fraud and Scam</li></a>
+    </div>
+    <div class="account" style="margin-left: 30px;">
+        <h3 class="p_title" style="color: white;">SECURITY</h3>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Savings  Account</li></a>
+    </div>
+    <div class="pricing" style="margin-left: 30px;">
+        <h3 class="p_title" style="color: white;">PRICING PLAN</h3>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Standard</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Premium</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Ultra</li></a>
+    </div>
+
+    <div class="enterprise1" style="margin-left: 30px;">
+        <h3 class="p_title" style="color: white;">ENTERPRISE</h3>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">About</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Careers</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Blog</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Diversity and <br> Inclusion</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Corporate culture</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Contact</li></a>
+    </div>
+
+    <div class="legal" style="margin-left: 30px;">
+        <h3 class="p_title" style="color: white;">LEGAL </h3>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Privacy Policy</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Terms of use</li></a>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">Acceptable Use <br> Policy</li></a>
+    </div>
+    <div class="research" style="margin-left: 20px;">
+        <h3 class="p_title" style="color: white;">RESEARCH SUPPORT</h3>
+        <a href="#" class="p_links" style="text-decoration: none; margin: 2px;"><li class="p_items">FAQ</li></a>
+    </div>
+</div>
+<div class="footer_icons" style="align-items: center; display: flex; margin-top: 30px;">
+    <div class="f_logo" style="margin-left: 50px; ">
+        <img src="images/logo_neero.svg" alt="logo"  >
+    </div>
+    <div class="foot_menu_links" style="display: inline-flex; margin-left: 50%;">
+        <img src="images/psi.svg" alt="psi">
+        <a href="#"><li class="p_items" style="margin-left: 25px; font-size: 30px;"><img src="images/facebook_icon.svg" alt="facebook_icon"></li></a>
+        <a href="#"><li class="p_items" style="margin-left: 25px; font-size: 30px;"><img src="images/instagram_icon.svg" alt="facebook_icon"></li></a>
+        <a href="#"><li class="p_items" style="margin-left: 25px; font-size: 30px;"><img src="images/x_icon.svg" alt="facebook_icon"></li></a>
+        <a href="#"><li class="p_items" style="margin-left: 25px; font-size: 30px;"><img src="images/linkedin_icon.svg" alt="facebook_icon"></li></a>
+        <a href="#"><li class="p_items" style="margin-left: 25px; font-size: 30px;"><img src="images/tiktok_icon.svg" alt="facebook_icon"></li></a>
+    </div>
+</div>
+
+<div class="foot_divider" >
+    <div class="f_div foot_dive" 
+    style=" width: 1200px;  height: 0.3px  ;background-color: #64738B dotted ; margin: auto; margin-top: 2px; ">
+    </div>
+</div>
+
+<div class="foot_text p_items p_items1" style="text-align: center; margin-top: 50px; font-size: 20px;">
+    <p> 
+        This site is published by Neero SAS. The Neero VISA card is a co
+      <br>  branded VISA card issued by our partner Ecobank Cameroon.
+    </p>
+    <h4 style="margin: 50px; text-decoration: underline;">&copy;2025 Neero Cameroun</h4>
+</div>
+</footer>
+
+<!-- End of footer -->
+</div>
+
+
+
+<!-- Toggle menu -->
+<script>
+    function toggleMenu() {
+        let nav = document.getElementById("navLinks");
+        nav.classList.toggle("active");
+    }
+</script>
+
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+
+</body>
+</html>
